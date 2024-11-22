@@ -1,0 +1,8 @@
+[submodule "amdevblog/temp"]
+	path = amdevblog/temp
+	url = https://github.com/AMohammadzadeh/amdev.github.io.git
+	branch = main
+[submodule "amdevblog/public"]
+	path = amdevblog/public
+	url = https://github.com/AMohammadzadeh/amdev.github.io.git
+	branch = main

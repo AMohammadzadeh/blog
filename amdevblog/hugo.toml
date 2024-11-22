@@ -1,0 +1,40 @@
+baseURL = 'https://amohammadzadeh.github.io/'
+languageCode = 'en-us'
+title = 'AMDev'
+theme = 'hugo-PaperMod'
+math = true
+
+[params]
+env = "production"
+    author = "Ahmad M."
+    defaultTheme = "auto"
+    ShowShareButtons = true
+    ShowReadingTime = true
+    displayFullLangName = true
+    ShowPostNavLinks = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    ShowRssButtonInSectionTermList = true
+    ShowAllPagesInArchive = true
+    ShowPageNums = true
+    ShowToc = false
+  [params.profileMode]
+  enabled = true
+  title = "Ahmad M."
+  imageUrl = "profilepic.png"
+  defaultTheme = "auto"
+    [[params.profileMode.buttons]]
+    name = "Blog"
+    url = "posts"
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/AMohammadzadeh"
+
+[[params.socialIcons]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/ahmad-mohammadzadeh/"
+
+[params.assets]
+disableFingerprinting = true
+
+
