@@ -2,10 +2,11 @@
 date = '2024-11-19T21:52:37+03:30'
 draft = false
 title = 'Be Careful What You Control For'
+tags= ['Casual Inference']
 math = true
 +++
 
-What is the effect of online learning on students' peformance? Does attending a top-tier university significantly affect future earnings?
+What is the effect of online learning on students' performance? Does attending a top-tier university significantly affect future earnings?
 Would a customer still purchase if we hadn’t offered a discount?
 
 We often encounter questions like these in our work or research. They aim to uncover the causal effect of a treatment (e.g., online learning, attending a prestigious university, offering a discount) on a particular outcome (e.g., students' performance, future earnings, customer purchases). Intuitively, we recognize that answering such questions is challenging—it requires us to observe the same individual in two different scenarios at the same time. For instance, we’d need to know whether the same customer would have purchased if they had not received the discount. This concept is referred to as **potential outcomes**.
@@ -289,7 +290,7 @@ W              0.8515      0.040     21.032      0.000       0.772       0.931
 ==============================================================================
 ```
 
-The result shows that $W$ has a significant coefficient in the second regression due to the spurious association introduced by conditioning on it, despite $W$ not being part of the direct causal pathway between education and income. Why is that? As we've discussed before, conditiong on W means we decide to focus only on people who participate in extracurricular activities ($W$) at a similar level. What happens here is that different combinations of $U_1$ and $U_2$ lead to the same $W$. For instance, Person A might have a high $U_1$ (high intrinsic motivation) but a low $U_2$ (weak social network), leading to moderate participation in extracurriculars ($W$). Person B might have a low $U_1$ but a high $U_2$, resulting in the same level of $W$. Person A's high $U_1$ leads to higher education ($T$), while Person B's high $U_2$ leads to higher income ($Y$). When we condition on $W$, these two effects seem related: people with higher education also appear to have higher income; but this relationship is spurious and introduced by conditioning on $W$.
+The result shows that $W$ has a significant coefficient in the second regression due to the spurious association introduced by conditioning on it, despite $W$ not being part of the direct causal pathway between education and income. Why is that? As we've discussed before, conditioning on W means we decide to focus only on people who participate in extracurricular activities ($W$) at a similar level. What happens here is that different combinations of $U_1$ and $U_2$ lead to the same $W$. For instance, Person A might have a high $U_1$ (high intrinsic motivation) but a low $U_2$ (weak social network), leading to moderate participation in extracurriculars ($W$). Person B might have a low $U_1$ but a high $U_2$, resulting in the same level of $W$. Person A's high $U_1$ leads to higher education ($T$), while Person B's high $U_2$ leads to higher income ($Y$). When we condition on $W$, these two effects seem related: people with higher education also appear to have higher income; but this relationship is spurious and introduced by conditioning on $W$.
 
 ---
 
@@ -352,7 +353,7 @@ In this article, we explored various sources of bias that can arise when decidin
 - **Mediator bias**: Blocking part of the causal path by controlling for variables that mediate the effect of the treatment on the outcome.
 - **Collider bias**: Introducing spurious associations by controlling for variables influenced by both the treatment and the outcome.
 - **M-bias**: Creating artificial relationships between unobserved variables by conditioning on colliders.
-- **Bias amplification**: Exacerbating existing biases by conditioning on a variable that has no effect on the ouctome except for an indirect effect via treatment.
+- **Bias amplification**: Exacerbating existing biases by conditioning on a variable that has no effect on the outcome except for an indirect effect via treatment.
 
 The key takeaway is that we should carefully consider the causal relationships among variables before deciding whether to adjust for a particular variable.
 

@@ -38,3 +38,6 @@ url = "https://www.linkedin.com/in/ahmad-mohammadzadeh/"
 disableFingerprinting = true
 
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-T3FF73RDK5'
