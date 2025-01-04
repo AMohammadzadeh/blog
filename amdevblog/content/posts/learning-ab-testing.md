@@ -29,7 +29,7 @@ $$
 n = \frac{16\sigma^2}{\delta^2}
 $$
 
-Where \[ \sigma^2 \] is the variance of the metric of interest and \[ \delta \] is the MDE[^1]. The calculation shows that we need \[ \frac{16 \times (1,000)^2}{(100)^2} = 1,600 \] users per variant. Note that since my metric of interest is continuous here, if the metric were binary (e.g., conversion rate), you could use \[ p \times (1 - p) \], where \[ p \] is the baseline conversion rate (e.g., 20%), to calculate \[ \sigma^2 \].
+Where \[ \sigma^2 \] is the variance of the metric of interest and \[ \delta \] is the MDE[^1]. The calculation shows that we need \[ \frac{16 \times (1,000)^2}{(100)^2} = 1,600 \] users per variant. Note that my metric of interest is continuous here; if the metric were binary (e.g., conversion rate), you could use \[ p \times (1 - p) \], where \[ p \] is the baseline conversion rate (e.g., 20%), to calculate \[ \sigma^2 \].
 
 An important consideration here is the normality assumption of sample means, which holds due to the _Central Limit Theorem_. The authors of the book _Trustworthy Online Controlled Experiments_ in Chapter 17 explain this concept and mention that one can calculate the minimum sample size needed for the normality assumption to be valid using the formula \[ 355 s^2 \], where \[ s \] is the skewness coefficient of the sample distribution of the metric.
 
