@@ -18,14 +18,15 @@ env = "production"
     ShowAllPagesInArchive = true
     ShowPageNums = true
     ShowToc = false
-  [params.profileMode]
-  enabled = true
-  title = "Ahmad M."
-  imageUrl = "profilepic.png"
-  defaultTheme = "auto"
-    [[params.profileMode.buttons]]
-    name = "Blog"
-    url = "posts"
+  [params.homeInfoParams]
+ # enabled = true
+  title = "Welcome!"
+  content = "My name is Ahmad and I’ve been working in the field of data for the past few years. On this blog, I share my projects, insights, and the fascinating aspects of data science and analytics that inspire me."
+ # imageUrl = "profilepic.png"
+ # defaultTheme = "auto"
+#    [[params.profileMode.buttons]]
+#    name = "Blog"
+#    url = "posts"
 [[params.socialIcons]]
 name = "github"
 url = "https://github.com/AMohammadzadeh"
